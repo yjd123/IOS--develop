@@ -37,6 +37,8 @@
     [self creatItem];
     [self creatTable];
     
+    self.view.backgroundColor = [UIColor redColor];
+    
  
 }
 
