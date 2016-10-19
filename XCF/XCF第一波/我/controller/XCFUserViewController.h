@@ -12,9 +12,11 @@
 @interface XCFUserViewController : UIViewController<UIActionSheetDelegate,UITableViewDataSource,UITableViewDelegate>
 
 
-//新浪微博对象
-@property ( nonatomic,strong) SinaWeibo *sinaWeibo;
 
 @property(nonatomic,strong)UITableView *table;
+
+@property(nonatomic,copy)   UILabel *titleLabel;
+
+@property(nonatomic,copy)NSString *text;
 
 @end

@@ -9,10 +9,15 @@
 #import "AppDelegate.h"
 #import "XCFGuideViewController.h"
 #import "XCFTabBarController.h"
-#import "XCFViewController.h"
-#import "XCFMarketViewController.h"
-#import "XCFUserViewController.h"
-#import "XCFEmailViewController.h"
+
+
+
+#import <sqlite3.h>
+
+// 定义
+
+#define KDataBaseFliePath [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/login.sqlite"]
+
 @interface AppDelegate ()
 
 
@@ -28,25 +33,7 @@
     
     [self.window makeKeyAndVisible];
     
-////    //创建视图控制器
-//    XCFViewController *mainVC = [[XCFViewController alloc]init];
-//   
-//    XCFUserViewController *search = [[XCFUserViewController alloc]init];
-//  
-//
-//    
-//    XCFMarketViewController *meVC = [[XCFMarketViewController alloc]init];
-//
-//    XCFEmailViewController *friendVC = [[XCFEmailViewController alloc]init];
-//    
-//
-//    
-//    //创建标签控制器
-//    XCFTabBarController *tabBarController = [[XCFTabBarController alloc]init];
-//    tabBarController.viewControllers = @[mainVC,meVC,friendVC,search];
-//    
-//    
-//    
+  
     //NSUserDefaults用户配置文件储存器
     //储存形势 类似于字典
     //单利方法 获取一个标准的用户配置对象
@@ -79,10 +66,85 @@
         self.window.rootViewController = [main instantiateInitialViewController];
     }
     
-//
+   [self creatSqlite];
     
     return YES;
 }
+
+
+-(void)creatSqlite
+{
+    NSLog(@"%@",NSHomeDirectory());
+    
+    // 1 创建文件管理者
+    
+    NSFileManager *manager=[NSFileManager defaultManager];
+    
+    // 2 判断数据库是否存在
+    
+    if ([manager fileExistsAtPath:KDataBaseFliePath]) {
+        
+        NSLog(@"数据库已经存在hahahhhhhhhhhhhhhhhhhhhaaaaaaaaaaaaaaaaaaaaaaa");
+        return;
+    }
+    
+    //2.1 如果不存在，就创建数据库
+    
+    [manager createFileAtPath:KDataBaseFliePath contents:nil attributes:nil];
+    
+    //3.1 打开数据库文件
+    
+    sqlite3 *sql =NULL;
+    
+    int openDbResult= sqlite3_open([KDataBaseFliePath UTF8String], &sql );
+    
+    if (openDbResult == SQLITE_OK) {
+        NSLog(@"打开数据库成功");
+        
+    }else{
+        NSLog(@"打开失败");
+        
+        // 删除数据库
+        
+        [manager removeItemAtPath:KDataBaseFliePath error:nil];
+        
+        return;
+    }
+    
+    // 4 创建表格   构建sql语句    构建id 作为主键 自动增长  username 不空 passname 不能空
+    
+    NSString *sqlString=@"CREATE TABLE USER(ID INTEGER PRIMARY KEY AUTOINCREMENT,username text NOT NULL UNIQUE,password text NOT NULL);";
+    
+    // 5 执行 sql语句
+    //    sqlite3*,                /* 数据库指针 */
+    //    const char *sql,                 /* 执行的sql语句 */
+    //    int (*callback)(void*,int,char**,char**),      /* 函数指针，执行完成后，回调的函数 */
+    //    void *,                           /* 回调函数的第一个参数 */
+    //    char **errmsg                   /* 错误信息 */
+    
+    //
+    char *errmsg=NULL;
+    
+    int execResult =sqlite3_exec(sql,[sqlString UTF8String],NULL,NULL,&errmsg);
+    
+    if (execResult == SQLITE_OK) {
+        NSLog(@"创建表格成功");
+    }else{
+        NSLog(@"表格创建失败");
+        
+        [manager removeItemAtPath:KDataBaseFliePath error:NULL];
+        
+        return;
+    }
+    
+    sqlite3_close(sql);
+    
+    
+}
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

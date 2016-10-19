@@ -82,7 +82,7 @@
         label.textColor=[UIColor blackColor];
     }
     UILabel *label=(UILabel *)[_tabView viewWithTag:btn.tag+100];
-    NSLog(@"%ld",btn.tag);
+
     label.textColor=[UIColor redColor];
     
     

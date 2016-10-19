@@ -48,6 +48,14 @@
 		8429D5DA1D9A44A400BD8992 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429D5CD1D9A44A400BD8992 /* NSObject+MJProperty.m */; };
 		8429D5DB1D9A44A400BD8992 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429D5CF1D9A44A400BD8992 /* NSString+MJExtension.m */; };
 		8429D5DC1D9A44A400BD8992 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8429D5D01D9A44A400BD8992 /* README.md */; };
+		842ACEFD1DB61B2400F72631 /* XCFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842ACEFC1DB61B2400F72631 /* XCFLoginViewController.m */; };
+		842ACF001DB61B7A00F72631 /* XCFLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 842ACEFF1DB61B7A00F72631 /* XCFLogin.m */; };
+		842ACF071DB61E7700F72631 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF011DB61E7700F72631 /* LaunchImage-700-568h@2x.png */; };
+		842ACF081DB61E7700F72631 /* LaunchImage-700-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF021DB61E7700F72631 /* LaunchImage-700-Portrait@2x~ipad.png */; };
+		842ACF091DB61E7700F72631 /* LaunchImage-700-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF031DB61E7700F72631 /* LaunchImage-700-Portrait~ipad.png */; };
+		842ACF0A1DB61E7700F72631 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF041DB61E7700F72631 /* LaunchImage-700@2x.png */; };
+		842ACF0B1DB61E7700F72631 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF051DB61E7700F72631 /* LaunchImage-800-667h@2x.png */; };
+		842ACF0C1DB61E7700F72631 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842ACF061DB61E7700F72631 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		842B803A1D88107B0055E3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B80391D88107B0055E3F0 /* main.m */; };
 		842B803D1D88107B0055E3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B803C1D88107B0055E3F0 /* AppDelegate.m */; };
 		842B80401D88107B0055E3F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B803F1D88107B0055E3F0 /* ViewController.m */; };
@@ -107,6 +115,7 @@
 		8437EF161D8ACD0500A0DE71 /* XCFMealsAndTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437EF151D8ACD0500A0DE71 /* XCFMealsAndTagsView.m */; };
 		8437EF181D8ACD1300A0DE71 /* XCFMealsAndTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437EF171D8ACD1300A0DE71 /* XCFMealsAndTagsView.xib */; };
 		8439FFE51DB31B8400F34D1F /* 杭电.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8439FFE41DB31B8400F34D1F /* 杭电.jpg */; };
+		843DD0D01DB711A900D9DFB7 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 843DD0CF1DB711A900D9DFB7 /* libsqlite3.0.tbd */; };
 		844136F41DA5EC6C00EC7334 /* ImageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844136EB1DA5EC6C00EC7334 /* ImageCollectionView.m */; };
 		844136F51DA5EC6C00EC7334 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844136ED1DA5EC6C00EC7334 /* ImageCollectionViewCell.m */; };
 		844136F61DA5EC6C00EC7334 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844136EF1DA5EC6C00EC7334 /* ImageScrollView.m */; };
@@ -377,6 +386,16 @@
 		8429D5CE1D9A44A400BD8992 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		8429D5CF1D9A44A400BD8992 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		8429D5D01D9A44A400BD8992 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		842ACEFB1DB61B2400F72631 /* XCFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFLoginViewController.h; sourceTree = "<group>"; };
+		842ACEFC1DB61B2400F72631 /* XCFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFLoginViewController.m; sourceTree = "<group>"; };
+		842ACEFE1DB61B7A00F72631 /* XCFLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFLogin.h; sourceTree = "<group>"; };
+		842ACEFF1DB61B7A00F72631 /* XCFLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFLogin.m; sourceTree = "<group>"; };
+		842ACF011DB61E7700F72631 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-700-568h@2x.png"; path = "XCF第一波/图标/LaunchImage-700-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		842ACF021DB61E7700F72631 /* LaunchImage-700-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-700-Portrait@2x~ipad.png"; path = "XCF第一波/图标/LaunchImage-700-Portrait@2x~ipad.png"; sourceTree = SOURCE_ROOT; };
+		842ACF031DB61E7700F72631 /* LaunchImage-700-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-700-Portrait~ipad.png"; path = "XCF第一波/图标/LaunchImage-700-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
+		842ACF041DB61E7700F72631 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-700@2x.png"; path = "XCF第一波/图标/LaunchImage-700@2x.png"; sourceTree = SOURCE_ROOT; };
+		842ACF051DB61E7700F72631 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-800-667h@2x.png"; path = "XCF第一波/图标/LaunchImage-800-667h@2x.png"; sourceTree = SOURCE_ROOT; };
+		842ACF061DB61E7700F72631 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage-800-Portrait-736h@3x.png"; path = "XCF第一波/图标/LaunchImage-800-Portrait-736h@3x.png"; sourceTree = SOURCE_ROOT; };
 		842B80351D88107B0055E3F0 /* XCF第一波.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XCF第一波.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B80391D88107B0055E3F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842B803B1D88107B0055E3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -497,6 +516,7 @@
 		8437EF151D8ACD0500A0DE71 /* XCFMealsAndTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFMealsAndTagsView.m; sourceTree = "<group>"; };
 		8437EF171D8ACD1300A0DE71 /* XCFMealsAndTagsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCFMealsAndTagsView.xib; sourceTree = "<group>"; };
 		8439FFE41DB31B8400F34D1F /* 杭电.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "杭电.jpg"; sourceTree = "<group>"; };
+		843DD0CF1DB711A900D9DFB7 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		844136EA1DA5EC6C00EC7334 /* ImageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionView.h; sourceTree = "<group>"; };
 		844136EB1DA5EC6C00EC7334 /* ImageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionView.m; sourceTree = "<group>"; };
 		844136EC1DA5EC6C00EC7334 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
@@ -761,6 +781,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843DD0D01DB711A900D9DFB7 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +807,10 @@
 			children = (
 				840AD1381DAA3A1000E7AD24 /* XCFUserViewController.h */,
 				840AD1391DAA3A1000E7AD24 /* XCFUserViewController.m */,
+				842ACEFB1DB61B2400F72631 /* XCFLoginViewController.h */,
+				842ACEFC1DB61B2400F72631 /* XCFLoginViewController.m */,
+				842ACEFE1DB61B7A00F72631 /* XCFLogin.h */,
+				842ACEFF1DB61B7A00F72631 /* XCFLogin.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1026,6 +1051,7 @@
 		842B802C1D88107B0055E3F0 = {
 			isa = PBXGroup;
 			children = (
+				843DD0CF1DB711A900D9DFB7 /* libsqlite3.0.tbd */,
 				842B80371D88107B0055E3F0 /* XCF第一波 */,
 				842B80511D88107C0055E3F0 /* XCF第一波Tests */,
 				842B805C1D88107C0055E3F0 /* XCF第一波UITests */,
@@ -1059,6 +1085,7 @@
 				848D76DE1D8D4DC400EAF887 /* 图标 */,
 				8437EED21D8A461500A0DE71 /* common */,
 				842B80461D88107B0055E3F0 /* LaunchScreen.storyboard */,
+				842B80441D88107B0055E3F0 /* Assets.xcassets */,
 				842B80491D88107B0055E3F0 /* Info.plist */,
 				842B80381D88107B0055E3F0 /* Supporting Files */,
 			);
@@ -1068,7 +1095,6 @@
 		842B80381D88107B0055E3F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				842B80441D88107B0055E3F0 /* Assets.xcassets */,
 				842B80391D88107B0055E3F0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1583,6 +1609,12 @@
 				848D76DF1D8D4DC400EAF887 /* addPhotoStyle1.png */,
 				84EDB2E31D96421D002DBFC9 /* reportIcongray.png */,
 				84536E331D8EBE830052CB70 /* keywords.plist */,
+				842ACF011DB61E7700F72631 /* LaunchImage-700-568h@2x.png */,
+				842ACF021DB61E7700F72631 /* LaunchImage-700-Portrait@2x~ipad.png */,
+				842ACF031DB61E7700F72631 /* LaunchImage-700-Portrait~ipad.png */,
+				842ACF041DB61E7700F72631 /* LaunchImage-700@2x.png */,
+				842ACF051DB61E7700F72631 /* LaunchImage-800-667h@2x.png */,
+				842ACF061DB61E7700F72631 /* LaunchImage-800-Portrait-736h@3x.png */,
 			);
 			name = "图标";
 			path = "我/图标";
@@ -1949,23 +1981,27 @@
 				848D77141D8D6B8000EAF887 /* tabBSelected.png in Resources */,
 				84F057A61DA1E96600B6D507 /* 早餐.json in Resources */,
 				84EDB2E61D96428E002DBFC9 /* reportIcon.png in Resources */,
+				842ACF071DB61E7700F72631 /* LaunchImage-700-568h@2x.png in Resources */,
 				84E9AA691DAC893E00A842A9 /* chatto_bg_normal.png in Resources */,
 				84367DE21D9E0161006806E3 /* MJRefresh.bundle in Resources */,
 				848D77041D8D6B8000EAF887 /* leftPageButtonBackgroundNormal.png in Resources */,
 				84E928F31DA68F74000B9D4C /* XCFGoodsShopCell.xib in Resources */,
 				84A862C71DB3BECF00CCD73F /* XCFForumViewCell.xib in Resources */,
 				848D770B1D8D6B8000EAF887 /* share_weibo.png in Resources */,
+				842ACF0C1DB61E7700F72631 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				84EDB2DA1D96225D002DBFC9 /* Ingredient.plist in Resources */,
 				84E9AA891DACEE9400A842A9 /* 4.jpg in Resources */,
 				84E9AA871DACEE9400A842A9 /* 2.jpg in Resources */,
 				844933CE1DA39C7A00F452F6 /* createRecipeCamera.png in Resources */,
 				84F817371DB4613B00230E14 /* XCFTopicCell.xib in Resources */,
+				842ACF0A1DB61E7700F72631 /* LaunchImage-700@2x.png in Resources */,
 				84E9AA681DAC893E00A842A9 /* chatfrom_bg_normal.png in Resources */,
 				848D770F1D8D6B8000EAF887 /* shopIcon.png in Resources */,
 				848D77161D8D6B8000EAF887 /* tabCSelected.png in Resources */,
 				8429D5D11D9A44A400BD8992 /* LICENSE in Resources */,
 				844511701DA0FA4600650E51 /* dishPagerLiked.png in Resources */,
 				8412F2721D8FAA00009632D1 /* XCFTagView.xib in Resources */,
+				842ACF091DB61E7700F72631 /* LaunchImage-700-Portrait~ipad.png in Resources */,
 				840AD1491DAA3D4B00E7AD24 /* SinaWeibo.bundle in Resources */,
 				848D76E21D8D66ED00EAF887 /* close.png in Resources */,
 				84536E341D8EBE830052CB70 /* keywords.plist in Resources */,
@@ -2007,6 +2043,7 @@
 				848D77011D8D6B8000EAF887 /* buylistButtonImage.png in Resources */,
 				848D770A1D8D6B8000EAF887 /* share_qzone.png in Resources */,
 				84E929181DA78B08000B9D4C /* yellowStar13Disabled.png in Resources */,
+				842ACF0B1DB61E7700F72631 /* LaunchImage-800-667h@2x.png in Resources */,
 				84E9AA8A1DACEE9400A842A9 /* 5.jpg in Resources */,
 				848D77081D8D6B8000EAF887 /* share_douban.png in Resources */,
 				8497CB9B1D9FC6BE00DF3A87 /* 首页数据.json in Resources */,
@@ -2028,6 +2065,7 @@
 				84F1D0BF1DA34FAC008C23B0 /* 首页header数据.json in Resources */,
 				8445116F1DA0FA4600650E51 /* dishPagerLike.png in Resources */,
 				8437EF181D8ACD1300A0DE71 /* XCFMealsAndTagsView.xib in Resources */,
+				842ACF081DB61E7700F72631 /* LaunchImage-700-Portrait@2x~ipad.png in Resources */,
 				84E9AA631DAC893E00A842A9 /* chat_bottom_textfield.png in Resources */,
 				84536E321D8EAF170052CB70 /* Main.storyboard in Resources */,
 				844137021DA5ED4700EC7334 /* XCFGoodsDetailView.xib in Resources */,
@@ -2113,6 +2151,7 @@
 				84A862C01DB3B5E000CCD73F /* NSString+Extension.m in Sources */,
 				842B806E1D8812BF0055E3F0 /* XCFTabBarController.m in Sources */,
 				842FF7971DA4FDC50053BB23 /* XCFGoods.m in Sources */,
+				842ACEFD1DB61B2400F72631 /* XCFLoginViewController.m in Sources */,
 				84F399741D995C59007E5F78 /* SDWebImageDownloader.m in Sources */,
 				8429D5B41D9A3F0000BD8992 /* AFSecurityPolicy.m in Sources */,
 				84E9AA7D1DACAF7400A842A9 /* MessageCell.m in Sources */,
@@ -2192,6 +2231,7 @@
 				84367DD71D9E0161006806E3 /* MJRefreshFooter.m in Sources */,
 				84367DDD1D9E0161006806E3 /* MJRefreshBackNormalFooter.m in Sources */,
 				84E929091DA7706D000B9D4C /* XCFGoodsReviewCell.m in Sources */,
+				842ACF001DB61B7A00F72631 /* XCFLogin.m in Sources */,
 				84E9AA801DACD23700A842A9 /* XCFGuideViewController.m in Sources */,
 				848D77231D8D732700EAF887 /* XCFBaseTabBarItem.m in Sources */,
 				8437EED81D8A4A6100A0DE71 /* XCFUpLoadViewController.m in Sources */,
