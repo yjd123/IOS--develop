@@ -22,7 +22,9 @@
 #define kExpirationDateKey @"kExpirationDateKey"
 #define kAuthDataKey @"kAuthDataKey"
 
-@interface XCFLogin ()<SinaWeiboDelegate>
+@interface XCFLogin ()<SinaWeiboDelegate>{
+    NSUserDefaults *userDef;
+}
 
 @end
 
@@ -179,9 +181,14 @@
     if (isAuth == NO) {
         //执行登陆操作
         [_sinaWeibo logIn];
+        
         NSLog(@"从未登陆过微博，需要重新登陆");
     } else {
         NSLog(@"已登陆过微博:%@", _sinaWeibo.accessToken);
+        
+        NSDictionary *dic=[userDef objectForKey:kAuthDataKey];
+        
+        NSLog(@"%@",dic);
     }
     
 }
@@ -189,24 +196,36 @@
 #pragma mark - 登陆数据本地持久化
 //保存登陆认证数据
 - (void)saveAuthData {
+    
+        NSLog(@"%@", NSHomeDirectory());
     //获取登陆后返回的用户信息
     //用户令牌
     NSString *accessToken = _sinaWeibo.accessToken;
+    
     //User ID
     NSString *uid = _sinaWeibo.userID;
     //令牌的有效期限
     NSDate *date = _sinaWeibo.expirationDate;
     //将数据打包成一个字典
     NSMutableDictionary *authDataDic = [[NSMutableDictionary alloc] init];
+    
     [authDataDic setObject:accessToken forKey:kAccessTokenKey];
+    
     [authDataDic setObject:uid forKey:kUserIDKey];
+    
     [authDataDic setObject:date forKey:kExpirationDateKey];
     
+    
     //使用NSUserDefaults 来保存数据
-    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    userDef = [NSUserDefaults standardUserDefaults];
+    
     [userDef setObject:[authDataDic copy] forKey:kAuthDataKey];
+    
     //数据同步  将保存的数据同步到属性列表中
+    
     [userDef synchronize];
+    
+    
     
     NSLog(@"%@", NSHomeDirectory());
     

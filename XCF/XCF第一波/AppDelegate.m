@@ -10,7 +10,7 @@
 #import "XCFGuideViewController.h"
 #import "XCFTabBarController.h"
 
-
+#import <AlipaySDK/AlipaySDK.h>
 
 #import <sqlite3.h>
 
@@ -50,20 +50,20 @@
     
     if (object) {
         //不是第一次加载程序
-        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
-        
-        self.window.rootViewController = [main instantiateInitialViewController];
-//          self.window.rootViewController=[[XCFGuideViewController alloc] init];
+//        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        
+//        
+//        self.window.rootViewController = [main instantiateInitialViewController];
+         self.window.rootViewController=[[XCFGuideViewController alloc] init];
        
         
     } else {
         
-      // self.window.rootViewController=[[XCFGuideViewController alloc] init];
-            UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
-        
-        self.window.rootViewController = [main instantiateInitialViewController];
+ self.window.rootViewController=[[XCFGuideViewController alloc] init];
+//            UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        
+//        
+//        self.window.rootViewController = [main instantiateInitialViewController];
     }
     
    [self creatSqlite];
@@ -143,6 +143,31 @@
 }
 
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    return YES;
+}
+
+// NOTE: 9.0以后使用新API接口
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    return YES;
+}
 
 
 

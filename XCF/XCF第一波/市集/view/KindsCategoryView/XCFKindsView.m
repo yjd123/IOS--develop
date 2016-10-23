@@ -100,12 +100,12 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         });
         
-        !self.confirmBlock ? : self.confirmBlock(self.cartItem);
+        !self.confirmBlock ? : self.confirmBlock();
         
     }
     // 如果是立即购买，直接回调
     else if (self.type == XCFKindsViewTypeOrder) {
-        !self.confirmBlock ? : self.confirmBlock(self.cartItem);
+        !self.confirmBlock ? : self.confirmBlock();
     }
     
 }

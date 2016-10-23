@@ -34,7 +34,7 @@
 
 @property (nonatomic, copy) void (^dismissBlock)();
 
-@property (nonatomic, copy) void (^confirmBlock)(XCFCartltem *); // 确定回调，回传选择好的商品属性
+@property (nonatomic, copy) void (^confirmBlock)(); // 确定回调，回传选择好的商品属性
 @property (nonatomic, copy) void (^animationBlock)(UIImage *, CGRect); // 执行图片动画回调，动画要在上一层执行，回传图片以及frame
 
 @end

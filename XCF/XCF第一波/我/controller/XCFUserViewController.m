@@ -48,7 +48,6 @@
     _table.delegate=self;
     _table.dataSource=self;
  
- 
     
     cellArray=@[@"账号管理",@"设置密码",@"收货地址",@"发现好友",@"消息推送",@"把下厨房告诉朋友",@"账号管理",@"帮助下厨房评分",@"消除缓存"];
     
@@ -264,8 +263,10 @@
     }
 
     cell.textLabel.text=cellArray[indexPath.row-1];
-       cell.backgroundColor=XCFGlobalBackgroundColor;
+    cell.backgroundColor=XCFGlobalBackgroundColor;
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     lbl=[[UILabel alloc]init];
     lbl.frame = CGRectMake(cell.frame.origin.x + 10, cell.frame.origin.y +59, cell.frame.size.width - 20, 1);
     lbl.backgroundColor =  [UIColor lightGrayColor];
